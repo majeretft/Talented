@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<talent id="52624a88-f55f-4db6-a3c2-a35d9aa3171d">
+	<caption>Talent caption</caption>
+	<description>Gives {base:agility:ffc000}</description>
+	<tier>1</tier>
+	<might>350</might>
+	<stats>
+		<stat type="agility" value="6" grow="0.25"></stat>
+	</stats>
+</talent>
