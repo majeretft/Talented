@@ -1,12 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Xml.Linq;
+using Talented.Entities.Talents.Stats;
 
 namespace Talented.DataProvider.Model
 {
-	class TalentParser
+	/// <summary>
+	/// Talent data parser
+	/// </summary>
+	public class TalentParser
 	{
+		public Stat ParseStat(XElement element)
+		{
+			if (element == null)
+				throw new ArgumentNullException("element");
+
+
+		}
 	}
 }

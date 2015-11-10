@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Talented.Entities.Talents.Stats;
 
-namespace Talented.Entity.Model.Entity
+namespace Talented.Entities.Talents
 {
-	/// <summary>
-	/// Contains all source information about a talent
-	/// </summary>
 	public class Talent : IEquatable<Talent>
 	{
 		/// <summary>

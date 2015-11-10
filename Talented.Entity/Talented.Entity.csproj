@@ -41,19 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Entity\Stat.cs" />
-    <Compile Include="Model\Entity\StatDependencyEnum.cs" />
-    <Compile Include="Model\Entity\StatScore.cs" />
-    <Compile Include="Model\Entity\StatTerrain.cs" />
-    <Compile Include="Model\Entity\StatTime.cs" />
-    <Compile Include="Model\Entity\Talent.cs" />
-    <Compile Include="Model\Exceptions\StatConfigurationException.cs" />
-    <Compile Include="Model\Exceptions\TalentConfigurationException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Entities\Toons\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

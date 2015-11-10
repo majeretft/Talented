@@ -40,8 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AI\Repository.cs" />
-    <Compile Include="Model\ConfigurationParser.cs" />
     <Compile Include="Model\ProfileReader.cs" />
     <Compile Include="Model\TalentParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
