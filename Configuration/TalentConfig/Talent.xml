@@ -1,4 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<talent id="">
-	
+<talent id="6f779e8f-11d6-4e10-965d-6eeabf465d49">
+	<might>350</might>
+	<tier>1</tier>
+	<stats>
+		<stat growType="Static">
+			<type>Agility</type>
+			<initialValue>4.25</initialValue>
+			<grow>0.25</grow>
+		</stat>
+		<stat growType="Static" dependencyType="Linear">
+			<type>Cunning</type>
+			<valueInitial>4.25</valueInitial>
+			<grow>0.25</grow>
+			<dependency>Score</dependency>
+			<valueAdditional>1.25</valueAdditional>
+		</stat>
+		<stat growType="Static" dependencyType="Linear">
+			<type>Will</type>
+			<valueInitial>3</valueInitial>
+			<grow>0.2</grow>
+			<dependency>Time</dependency>
+			<valueAdditional>2.25</valueAdditional>
+		</stat>
+		<stat growType="Static" dependencyType="Neutral Foreign">
+			<type>Durability</type>
+			<valueInitial>4.25</valueInitial>
+			<grow>0.1</grow>
+			<dependency>Terrain</dependency>
+			<valueAdditional>3</valueAdditional>
+		</stat>
+	</stats>
 </talent>

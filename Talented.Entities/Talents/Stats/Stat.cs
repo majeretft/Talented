@@ -85,7 +85,7 @@
 		/// <summary>
 		/// Gets or sets base value of current stat
 		/// </summary>
-		public double InitialValue { get; set; }
+		public double ValueInitial { get; set; }
 
 		/// <summary>
 		/// Gets or sets grow percentage per level of talent
