@@ -6,7 +6,7 @@ namespace Talented.Entity.Model.Entity
 	/// <summary>
 	/// Contains all source information about a talent
 	/// </summary>
-	public class Talent
+	public class Talent : IEquatable<Talent>
 	{
 		/// <summary>
 		/// Gets or sets unique identifier
@@ -29,13 +29,35 @@ namespace Talented.Entity.Model.Entity
 		public List<Stat> Stats { get; set; }
 
 		/// <summary>
-		/// Gets or sets caption
+		/// Check for equality between objects
 		/// </summary>
-		public string Caption { get; set; }
+		/// <param name="other">Another object</param>
+		/// <returns>True if other equals current</returns>
+		public override bool Equals(object other)
+		{
+			return other is Talent ? Equals(other) : false;
+		}
 
 		/// <summary>
-		/// Gets or sets description template
+		/// Returns hash code
 		/// </summary>
-		public string Description { get; set; }
+		/// <returns>Hash code</returns>
+		public override int GetHashCode()
+		{
+			return Id.GetHashCode();
+		}
+
+		/// <summary>
+		/// Check for equality between talents
+		/// </summary>
+		/// <param name="other">Another talent</param>
+		/// <returns>True if other equals current</returns>
+		public bool Equals(Talent other)
+		{
+			if (other == null)
+				return false;
+
+			return Id == other.Id;
+		}
 	}
 }

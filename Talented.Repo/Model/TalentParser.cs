@@ -23,16 +23,16 @@ namespace Talented.Repo.Model
 
 			var result = new Talent
 			{
-				Id = new Guid(talentDocument.XPathEvaluate(@"string(talent/@id)") as string),
-				Caption = talentDocument.XPathEvaluate(@"string(talent/caption)") as string,
-				Description = talentDocument.XPathEvaluate(@"string(talent/description)") as string,
+				//Id = new Guid(talentDocument.XPathEvaluate(@"string(talent/@id)") as string),
+				//Caption = talentDocument.XPathEvaluate(@"string(talent/caption)") as string,
+				//Description = talentDocument.XPathEvaluate(@"string(talent/description)") as string,
 				Might = (double)talentDocument.XPathEvaluate(@"number(talent/might)"),
 				Tier = (int)talentDocument.XPathEvaluate(@"number(talent/tier)"),
 				Stats = talentDocument.XPathSelectElements(@"talent/stats/stat")
 					.Select(x => new Stat
 					{
 						Grow = (double)x.XPathEvaluate("number(stat/@grow)"),
-						Type = (StatTypeEnum)Enum.Parse(typeof(StatTypeEnum), x.XPathEvaluate("string(stat/type)") as string, true),
+						//Type = (StatTypeEnum)Enum.Parse(typeof(StatTypeEnum), x.XPathEvaluate("string(stat/type)") as string, true),
 						Value = (double)x.XPathEvaluate("number(stat/@value)")
 					})
 					.ToList()
