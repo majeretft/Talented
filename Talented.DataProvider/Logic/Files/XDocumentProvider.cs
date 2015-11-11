@@ -12,7 +12,7 @@ namespace Talented.DataProvider.Logic.Files
 	public class XDocumentProvider
 	{
 		/// <summary>
-		/// Load sigle document
+		/// Load single document
 		/// </summary>
 		/// <param name="path">File path</param>
 		/// <returns>Loaded document</returns>

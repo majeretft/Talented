@@ -112,7 +112,7 @@ namespace Talented.DataProvider.Model
 			stat.GrowType = (Stat.GrowTypeEnum)Enum.Parse(typeof(Stat.GrowTypeEnum), value, true);
 
 			value = element.Element("type").Value;
-			stat.Type = (Stat.StatTypeEnum)Enum.Parse(typeof(Stat.StatTypeEnum), value, true);
+			stat.Type = (Stat.TypeEnum)Enum.Parse(typeof(Stat.TypeEnum), value, true);
 
 			value = element.Element("initialValue").Value;
 			stat.ValueInitial = double.Parse(value);
