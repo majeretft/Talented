@@ -8,21 +8,21 @@
 			<initialValue>4.25</initialValue>
 			<grow>0.25</grow>
 		</stat>
-		<stat growType="Static" dependencyType="Linear">
+		<stat growType="Static">
 			<type>Cunning</type>
 			<valueInitial>4.25</valueInitial>
 			<grow>0.25</grow>
 			<dependency>Score</dependency>
 			<valueAdditional>1.25</valueAdditional>
 		</stat>
-		<stat growType="Static" dependencyType="Linear">
+		<stat growType="Static">
 			<type>Will</type>
 			<valueInitial>3</valueInitial>
 			<grow>0.2</grow>
 			<dependency>Time</dependency>
 			<valueAdditional>2.25</valueAdditional>
 		</stat>
-		<stat growType="Static" dependencyType="Neutral Foreign">
+		<stat growType="Static" dependencyType="Neutral, Foreign">
 			<type>Durability</type>
 			<valueInitial>4.25</valueInitial>
 			<grow>0.1</grow>

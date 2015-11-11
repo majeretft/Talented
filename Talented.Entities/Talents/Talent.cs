@@ -4,6 +4,9 @@ using Talented.Entities.Talents.Stats;
 
 namespace Talented.Entities.Talents
 {
+	/// <summary>
+	/// Represents a single talent
+	/// </summary>
 	public class Talent : IEquatable<Talent>
 	{
 		/// <summary>

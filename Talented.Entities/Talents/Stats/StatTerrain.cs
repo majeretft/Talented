@@ -17,22 +17,22 @@ namespace Talented.Entities.Talents.Stats
 			/// <summary>
 			/// Independent of terrain (default)
 			/// </summary>
-			None,
+			None = 0x00,
 
 			/// <summary>
 			/// Native terrain
 			/// </summary>
-			Native,
+			Native = 0x01,
 
 			/// <summary>
 			/// Neutral terrain
 			/// </summary>
-			Neutral,
+			Neutral = 0x10,
 
 			/// <summary>
 			/// Other team terrain
 			/// </summary>
-			Foreign
+			Foreign = 0x11
 		}
 
 		/// <summary>
@@ -43,7 +43,7 @@ namespace Talented.Entities.Talents.Stats
 		/// <summary>
 		/// Gets or sets terrain dependency type
 		/// </summary>
-		public TerrainTypeEnum DependencyType { get; set; }
+		public TerrainTypeEnum DependencyHandling { get; set; }
 
 		/// <summary>
 		/// Gets or sets additional value for condition

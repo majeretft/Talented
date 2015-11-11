@@ -9,5 +9,10 @@
 		/// Gets or sets current stat dependency
 		/// </summary>
 		StatDependencyEnum Dependency { get; set; }
+
+		/// <summary>
+		/// Gets or sets additional value for satisfied condition
+		/// </summary>
+		double ValueAdditional { get; set; }
 	}
 }

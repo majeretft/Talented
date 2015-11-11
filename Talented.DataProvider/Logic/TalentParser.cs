@@ -12,6 +12,11 @@ namespace Talented.DataProvider.Model
 	/// </summary>
 	public class TalentParser
 	{
+		/// <summary>
+		/// Get new talent instance from Xml
+		/// </summary>
+		/// <param name="document">Xml configuration</param>
+		/// <returns>Talent instance</returns>
 		public Talent ParseTalent(XDocument document)
 		{
 			if (document == null)
@@ -37,11 +42,11 @@ namespace Talented.DataProvider.Model
 		}
 
 		/// <summary>
-		/// 
+		/// Parse Xml configuration
 		/// </summary>
-		/// <param name="element"></param>
-		/// <returns></returns>
-		private Stat ParseStat(XElement element)
+		/// <param name="element">Stat node from Xml configuration</param>
+		/// <returns>Stat instance</returns>
+		protected Stat ParseStat(XElement element)
 		{
 			if (element == null)
 				throw new ArgumentNullException("element");
@@ -49,66 +54,104 @@ namespace Talented.DataProvider.Model
 			var dependencyType = StatDependencyEnum.None;
 			var dependencyElement = element.Element("dependency");
 			if (dependencyElement != null && !string.IsNullOrEmpty(dependencyElement.Value))
-				dependencyType = (StatDependencyEnum) Enum.Parse(typeof(StatDependencyEnum), dependencyElement.Value, true);
+				dependencyType = (StatDependencyEnum)Enum.Parse(typeof(StatDependencyEnum), dependencyElement.Value, true);
 
 			switch (dependencyType)
 			{
-				case StatDependencyEnum.None: break;
-				case StatDependencyEnum.Score: break;
-				case StatDependencyEnum.Terrain: break;
-				case StatDependencyEnum.Time: break;
+				case StatDependencyEnum.None:
+					{
+						var stat = new Stat();
+						FillStat(element, stat);
+						return stat;
+					}
+
+				case StatDependencyEnum.Time:
+					{
+						var stat = new StatTime();
+						FillStat(element, stat);
+						FillDependency(element, stat);
+						return stat;
+					}
+
+				case StatDependencyEnum.Score:
+					{
+						var stat = new StatScore();
+						FillStat(element, stat);
+						FillDependency(element, stat);
+						return stat;
+					}
+
+				case StatDependencyEnum.Terrain:
+					{
+						var stat = new StatTerrain();
+						FillStat(element, stat);
+						FillDependency(element, stat);
+						FillStatTerrain(element, stat);
+						return stat;
+					}
+
 				default: throw new NotSupportedException(string.Format("{0} is not supported!", dependencyType.ToString()));
 			}
 		}
 
 		/// <summary>
-		/// 
+		/// Fill stat data
 		/// </summary>
-		/// <param name="element"></param>
-		/// <returns></returns>
-		private Stat ParseStatNone(XElement element)
+		/// <param name="element">Stat node from Xml configuration</param>
+		/// <param name="stat">Stat instance</param>
+		protected void FillStat(XElement element, Stat stat)
 		{
 			if (element == null)
 				throw new ArgumentNullException("element");
+			if (stat == null)
+				throw new ArgumentNullException("stat");
 
-			var dependencyType = StatDependencyEnum.None;
-			var dependencyElement = element.Element("dependency");
+			string value;
+
+			value = element.Attribute("growType").Value;
+			stat.GrowType = (Stat.GrowTypeEnum)Enum.Parse(typeof(Stat.GrowTypeEnum), value, true);
+
+			value = element.Element("type").Value;
+			stat.Type = (Stat.StatTypeEnum)Enum.Parse(typeof(Stat.StatTypeEnum), value, true);
+
+			value = element.Element("initialValue").Value;
+			stat.ValueInitial = double.Parse(value);
+
+			value = element.Element("grow").Value;
+			stat.Grow = double.Parse(value);
 		}
 
 		/// <summary>
-		/// 
+		/// Fill stat dependency data
 		/// </summary>
-		/// <param name="element"></param>
-		/// <returns></returns>
-		private Stat ParseStatScore(XElement element)
+		/// <param name="element">Stat node from Xml configuration</param>
+		/// <param name="stat">Stat instance</param>
+		protected void FillDependency(XElement element, IDependency stat)
 		{
 			if (element == null)
 				throw new ArgumentNullException("element");
 
+			string value;
+
+			value = element.Attribute("dependency").Value;
+			stat.Dependency = (StatDependencyEnum)Enum.Parse(typeof(StatDependencyEnum), value, true);
+
+			value = element.Element("valueAdditional").Value;
+			stat.ValueAdditional = double.Parse(value);
 		}
 
 		/// <summary>
-		/// 
+		/// Fill stat terrain data
 		/// </summary>
-		/// <param name="element"></param>
-		/// <returns></returns>
-		private Stat ParseStatTime(XElement element)
+		/// <param name="element">Stat node from Xml configuration</param>
+		/// <param name="stat">Stat instance</param>
+		protected void FillStatTerrain(XElement element, StatTerrain stat)
 		{
 			if (element == null)
 				throw new ArgumentNullException("element");
 
-		}
-
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="element"></param>
-		/// <returns></returns>
-		private Stat ParseStatTerrain(XElement element)
-		{
-			if (element == null)
-				throw new ArgumentNullException("element");
-
+			var value = element.Attribute("dependency").Value;
+			stat.Dependency = (StatDependencyEnum)Enum.Parse(typeof(StatDependencyEnum), value, true);
 		}
 	}
 }
