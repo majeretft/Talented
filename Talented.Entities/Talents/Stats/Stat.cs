@@ -2,16 +2,17 @@
 {
 	/// <summary>
 	/// Represents a single stat
+	/// Contains initial data
 	/// </summary>
-	public class Stat
+	public partial class Stat
 	{
 		/// <summary>
 		/// Possible stats types
 		/// </summary>
-		public enum StatTypeEnum
+		public enum TypeEnum
 		{
 			/// <summary>
-			/// Default value
+			/// Default value (valid stat should not have this type)
 			/// </summary>
 			None,
 
@@ -62,6 +63,11 @@
 		public enum GrowTypeEnum
 		{
 			/// <summary>
+			/// Value is independent of level (default)
+			/// </summary>
+			None,
+
+			/// <summary>
 			/// Value will be multiplied by 1 + Grow per level
 			/// </summary>
 			Percent,
@@ -80,7 +86,7 @@
 		/// <summary>
 		/// Gets or sets current stat type
 		/// </summary>
-		public StatTypeEnum Type { get; set; }
+		public TypeEnum Type { get; set; }
 
 		/// <summary>
 		/// Gets or sets base value of current stat
