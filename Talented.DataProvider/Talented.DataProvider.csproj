@@ -43,6 +43,7 @@
     <Compile Include="Logic\EnvironmentParser.cs" />
     <Compile Include="Logic\TalentParser.cs" />
     <Compile Include="Logic\ToonParser.cs" />
+    <Compile Include="Logic\Files\XDocumentProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
