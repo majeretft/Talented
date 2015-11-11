@@ -2,7 +2,7 @@
 {
 	/// <summary>
 	/// Represents a single stat
-	/// Adds functionality for score dependency
+	/// Adds functionality for score dependency (creep stat, nearby casts, ect.)
 	/// </summary>
 	public class StatScore : Stat, IDependency
 	{

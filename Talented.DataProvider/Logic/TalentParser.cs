@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
+using Talented.Entities;
 using Talented.Entities.Talents;
 using Talented.Entities.Talents.Stats;
 
@@ -25,14 +26,14 @@ namespace Talented.DataProvider.Model
 			var element = document.Root;
 			var result = new Talent();
 
-			var idString = element.Attribute("id").Value;
-			result.Id = Guid.Parse(idString);
+			var value = element.Attribute("id").Value;
+			result.Id = Guid.Parse(value);
 
-			var mightString = element.Element("might").Value;
-			result.Might = int.Parse(mightString);
+			value = element.Element("might").Value;
+			result.Might = int.Parse(value);
 
-			var tierString = element.Element("tier").Value;
-			result.Might = int.Parse(tierString);
+			value = element.Element("tier").Value;
+			result.Might = int.Parse(value);
 
 			result.Stats = new List<Stat>();
 			var statElements = element.Element("stats").Elements().ToList();
@@ -106,9 +107,7 @@ namespace Talented.DataProvider.Model
 			if (stat == null)
 				throw new ArgumentNullException("stat");
 
-			string value;
-
-			value = element.Attribute("growType").Value;
+			var value = element.Attribute("growType").Value;
 			stat.GrowType = (Stat.GrowTypeEnum)Enum.Parse(typeof(Stat.GrowTypeEnum), value, true);
 
 			value = element.Element("type").Value;
