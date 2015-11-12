@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using Talented.Entities;
 using Talented.Entities.Talents;
 using Talented.Entities.Talents.Stats;
 
@@ -60,25 +59,15 @@ namespace Talented.DataProvider.Model
 			switch (dependencyType)
 			{
 				case StatDependencyEnum.None:
+				case StatDependencyEnum.Time:
+				case StatDependencyEnum.Score:
 					{
 						var stat = new Stat();
 						FillStat(element, stat);
-						return stat;
-					}
 
-				case StatDependencyEnum.Time:
-					{
-						var stat = new StatTime();
-						FillStat(element, stat);
-						FillDependency(element, stat);
-						return stat;
-					}
+						if (dependencyType != StatDependencyEnum.None)
+							FillDependency(element, stat);
 
-				case StatDependencyEnum.Score:
-					{
-						var stat = new StatScore();
-						FillStat(element, stat);
-						FillDependency(element, stat);
 						return stat;
 					}
 
@@ -125,7 +114,7 @@ namespace Talented.DataProvider.Model
 		/// </summary>
 		/// <param name="element">Stat node from Xml configuration</param>
 		/// <param name="stat">Stat instance</param>
-		protected void FillDependency(XElement element, IDependency stat)
+		protected void FillDependency(XElement element, Stat stat)
 		{
 			if (element == null)
 				throw new ArgumentNullException("element");

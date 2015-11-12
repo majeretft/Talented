@@ -48,10 +48,6 @@
     <Folder Include="AI\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Talented.Entities.Extensions\Talented.Entities.Extensions.csproj">
-      <Project>{a125335f-b085-41eb-9514-621633d63922}</Project>
-      <Name>Talented.Entities.Extensions</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Talented.Entities\Talented.Entities.csproj">
       <Project>{71aaad24-4c57-45fd-b85f-06173f5de8ce}</Project>
       <Name>Talented.Entities</Name>

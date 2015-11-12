@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Talented.Entities;
-using Talented.Entities.Extensions.Talents;
 using Talented.Entities.Talents;
 using Talented.Entities.Talents.Stats;
 

@@ -7,7 +7,7 @@ namespace Talented.Entities.Talents
 	/// <summary>
 	/// Represents a single talent
 	/// </summary>
-	public class Talent : IEquatable<Talent>
+	public partial class Talent : IEquatable<Talent>
 	{
 		/// <summary>
 		/// Gets or sets unique identifier

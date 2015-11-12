@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Talented.Entities.Extensions.Talents;
 using Talented.Entities.Talents;
 
 namespace Talented.Calculator.Logic

@@ -3,26 +3,30 @@
 namespace Talented.Entities.Talents.Stats
 {
 	/// <summary>
-	/// Represents a single stat
-	/// Adds functionality for terrain dependency
+	/// Added functionality for dependency
 	/// </summary>
-	public class StatTerrain : Stat
+	public partial class Stat
 	{
 		/// <summary>
-		/// Gets or sets terrain dependency type
+		/// Gets or sets current stat dependency
 		/// </summary>
-		public TerrainTypeEnum DependencyHandling { get; set; }
+		public StatDependencyEnum Dependency { get; set; }
+
+		/// <summary>
+		/// Gets or sets additional value if condition is satisfied
+		/// </summary>
+		public double ValueAdditional { get; set; }
 
 		/// <summary>
 		/// Applies additional value if condition is satisfied
 		/// </summary>
 		/// <param name="context">Current battle settings</param>
-		internal override void ApplyCondition(BattleRuntime context)
+		internal virtual void ApplyCondition(BattleRuntime context)
 		{
 			if (context == null)
 				throw new ArgumentNullException("context");
 
-			if (DependencyHandling.HasFlag(context.TerrainType))
+			if (context.IsMaxScore)
 				Value += ValueAdditional;
 		}
 	}
