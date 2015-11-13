@@ -39,28 +39,26 @@ namespace Talented.Calculator.Logic.Talents
 		/// <param name="talents">All talents</param>
 		/// <param name="castleContext">Castle settings</param>
 		/// <param name="battleContext">Battle conditions description</param>
-		/// <returns>Talents calculation result</returns>
-		public CalculationResult Calculate(IEnumerable<Talent> talents, CastleRuntime castleContext, BattleRuntime battleContext)
+		/// <param name="calculationResult">Processing calculation result</param>
+		public void Calculate(IEnumerable<Talent> talents, CastleRuntime castleContext, BattleRuntime battleContext, CalculationResult calculationResult)
 		{
 			if (castleContext == null)
 				throw new ArgumentNullException("castleContext");
+			if (calculationResult == null)
+				throw new ArgumentNullException("calculationResult");
 
 			var talentsUsed = GetUsedTalents(talents, castleContext.TalentLevelDictionary);
 
 			ApplyCastleContext(talentsUsed, castleContext.TalentLevelDictionary);
 			ApplyBattleContext(talentsUsed, battleContext);
 
-			var result = new CalculationResult();
-
 			talentsUsed
 				.ToList()
 				.ForEach(x =>
 				{
-					result.Might += x.Might;
-					x.Stats.ForEach(y => applyStatValue(y.Type, y.Value, result));
+					calculationResult.Might += x.Might;
+					x.Stats.ForEach(y => applyStatValue(y.Type, y.Value, calculationResult));
 				});
-
-			return result;
 		}
 
 		/// <summary>

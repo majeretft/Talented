@@ -9,7 +9,7 @@ namespace Talented.DataProvider.Logic.Files
 	/// <summary>
 	/// Provides Xml configuration files for parsing
 	/// </summary>
-	public class XDocumentProvider
+	internal class XDocumentProvider
 	{
 		/// <summary>
 		/// Load single document

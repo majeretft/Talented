@@ -11,7 +11,7 @@ namespace Talented.DataProvider.Model
 	/// <summary>
 	/// Talent data parser
 	/// </summary>
-	public class TalentParser
+	internal class TalentParser
 	{
 		/// <summary>
 		/// Get new talent instance from Xml
@@ -38,6 +38,25 @@ namespace Talented.DataProvider.Model
 			result.Stats = new List<Stat>();
 			var statElements = element.Element("stats").Elements().ToList();
 			statElements.ForEach(x => result.Stats.Add(ParseStat(x)));
+
+			return result;
+		}
+
+		/// <summary>
+		/// Get list of talents from Xml
+		/// </summary>
+		/// <param name="documents">Xml configuration list</param>
+		/// <returns>Talents list</returns>
+		public IEnumerable<Talent> ParseTalents(IEnumerable<XDocument> documents)
+		{
+			if (documents == null)
+				throw new ArgumentNullException("documents");
+
+			var result = new List<Talent>();
+
+			documents
+				.ToList()
+				.ForEach(x => result.Add(ParseTalent(x)));
 
 			return result;
 		}
