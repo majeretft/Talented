@@ -1,1 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<toon id="dfa1673e-4c53-4f63-97df-876948b8b3a7">
+	<stats>
+		<stat>
+			<type>Agility</type>
+			<initialValue>4.25</initialValue>
+		</stat>
+		<stat>
+			<type>Durability</type>
+			<initialValue>4.25</initialValue>
+		</stat>
+		<stat>
+			<type>Cunning</type>
+			<initialValue>4.25</initialValue>
+		</stat>
+		<stat>
+			<type>Health</type>
+			<initialValue>4.25</initialValue>
+		</stat>
+		<stat>
+			<type>Moveement</type>
+			<initialValue>4.25</initialValue>
+		</stat>
+		<stat>
+			<type>RegenerationHP</type>
+			<initialValue>4.25</initialValue>
+		</stat>
+		<stat>
+			<type>RegenerationMP</type>
+			<initialValue>4.25</initialValue>
+		</stat>
+	</stats>
+</toon>
