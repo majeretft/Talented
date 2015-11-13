@@ -16,6 +16,21 @@
 		Agility,
 
 		/// <summary>
+		/// Attack power
+		/// </summary>
+		Attack,
+
+		/// <summary>
+		/// Cunning value
+		/// </summary>
+		Cunning,
+
+		/// <summary>
+		/// Physical protection
+		/// </summary>
+		Durability,
+
+		/// <summary>
 		/// Hit points value
 		/// </summary>
 		Health,
@@ -26,19 +41,9 @@
 		HealthSteal,
 
 		/// <summary>
-		/// Cunning value
+		/// Movement speed
 		/// </summary>
-		Cunning,
-
-		/// <summary>
-		/// Magical protection
-		/// </summary>
-		Will,
-
-		/// <summary>
-		/// Physical protection
-		/// </summary>
-		Durability,
+		Moveement,
 
 		/// <summary>
 		/// HP regeneration value
@@ -51,13 +56,8 @@
 		RegenerationMP,
 
 		/// <summary>
-		/// Movement speed
+		/// Magical protection
 		/// </summary>
-		Moveement,
-
-		/// <summary>
-		/// Attack power
-		/// </summary>
-		Attack
+		Will
 	}
 }

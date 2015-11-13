@@ -11,6 +11,21 @@
 		public double Agility { get; set; }
 
 		/// <summary>
+		/// Gets or sets attack power
+		/// </summary>
+		public double Attack { get; set; }
+
+		/// <summary>
+		/// Gets or sets cunning value
+		/// </summary>
+		public double Cunning { get; set; }
+
+		/// <summary>
+		/// Gets or sets physical protection
+		/// </summary>
+		public double Durability { get; set; }
+
+		/// <summary>
 		/// Gets or sets hit points value
 		/// </summary>
 		public double Health { get; set; }
@@ -21,19 +36,24 @@
 		public double HealthSteal { get; set; }
 
 		/// <summary>
-		/// Gets or sets cunning value
+		/// Gets or sets magical resistance
 		/// </summary>
-		public double Cunning { get; set; }
+		public double MagicalResistance { get; set; }
 
 		/// <summary>
-		/// Gets or sets magical protection
+		/// Gets or sets might value
 		/// </summary>
-		public double Will { get; set; }
+		public double Might { get; set; }
 
 		/// <summary>
-		/// Gets or sets physical protection
+		/// Gets or sets movement speed
 		/// </summary>
-		public double Durability { get; set; }
+		public double Moveement { get; set; }
+
+		/// <summary>
+		/// Gets or sets physical resistance
+		/// </summary>
+		public double PhisycalResistance { get; set; }
 
 		/// <summary>
 		/// Gets or sets HP regeneration value
@@ -46,28 +66,8 @@
 		public double RegenerationMP { get; set; }
 
 		/// <summary>
-		/// Gets or sets movement speed
+		/// Gets or sets magical protection
 		/// </summary>
-		public double Moveement { get; set; }
-
-		/// <summary>
-		/// Gets or sets attack power
-		/// </summary>
-		public double Attack { get; set; }
-
-		/// <summary>
-		/// Gets or sets physical resistance
-		/// </summary>
-		public double PhisycalResistance { get; set; }
-
-		/// <summary>
-		/// Gets or sets magical resistance
-		/// </summary>
-		public double MagicalResistance { get; set; }
-
-		/// <summary>
-		/// Gets or sets might value
-		/// </summary>
-		public double Might { get; set; }
+		public double Will { get; set; }
 	}
 }

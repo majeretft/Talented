@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Talented.DataProvider.Model
+﻿namespace Talented.DataProvider.Model
 {
-	class ToonParser
+	/// <summary>
+	/// Toon initial data parser
+	/// </summary>
+	public class ToonParser
 	{
+
 	}
 }
