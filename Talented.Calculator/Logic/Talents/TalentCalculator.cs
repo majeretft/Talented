@@ -12,17 +12,9 @@ namespace Talented.Calculator.Logic.Talents
 	internal class TalentCalculator
 	{
 		/// <summary>
-		/// Apply specific stat value to calculation result
-		/// </summary>
-		/// <param name="type">Stat type</param>
-		/// <param name="value">Stat value</param>
-		/// <param name="calculationResult">Current calculation result</param>
-		public delegate void ResultValueEditor(StatTypeEnum type, double value, CalculationResult calculationResult);
-
-		/// <summary>
 		/// Result modification handler
 		/// </summary>
-		private ResultValueEditor ApplyStatValue;
+		private ResultValueEditor applyStatValue;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TalentCalculator" /> class
@@ -30,8 +22,16 @@ namespace Talented.Calculator.Logic.Talents
 		/// <param name="applyStatValue">Result modification function</param>
 		public TalentCalculator(ResultValueEditor applyStatValue)
 		{
-			ApplyStatValue = applyStatValue;
+			this.applyStatValue = applyStatValue;
 		}
+
+		/// <summary>
+		/// Apply specific stat value to calculation result
+		/// </summary>
+		/// <param name="type">Stat type</param>
+		/// <param name="value">Stat value</param>
+		/// <param name="calculationResult">Current calculation result</param>
+		public delegate void ResultValueEditor(StatTypeEnum type, double value, CalculationResult calculationResult);
 
 		/// <summary>
 		/// Calculate stats given by talents
@@ -57,7 +57,7 @@ namespace Talented.Calculator.Logic.Talents
 				.ForEach(x =>
 				{
 					result.Might += x.Might;
-					x.Stats.ForEach(y => ApplyStatValue(y.Type, y.Value, result);
+					x.Stats.ForEach(y => applyStatValue(y.Type, y.Value, result));
 				});
 
 			return result;

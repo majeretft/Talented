@@ -8,13 +8,12 @@ namespace Talented.Calculator.Logic
 	/// </summary>
 	internal class DependentPropertiesCaclulator
 	{
-
-		public void Calculate(CalculationResult calculationResult)
+		/*public void Calculate(CalculationResult calculationResult)
 		{
 			if (calculationResult == null)
 				throw new ArgumentNullException("calculationResult");
 
 
-		}
+		}*/
 	}
 }

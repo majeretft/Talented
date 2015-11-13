@@ -3,6 +3,9 @@ using Talented.Entities;
 
 namespace Talented.Calculator.Logic
 {
+	/// <summary>
+	/// Provides common functions
+	/// </summary>
 	internal class CommonFunctions
 	{
 		/// <summary>

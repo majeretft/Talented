@@ -2,20 +2,15 @@
 
 namespace Talented.Calculator.Logic
 {
+	/// <summary>
+	/// Calculates stats given by toon
+	/// </summary>
 	internal class ToonCalculator
 	{
 		/// <summary>
-		/// Apply specific stat value to calculation result
-		/// </summary>
-		/// <param name="type">Stat type</param>
-		/// <param name="value">Stat value</param>
-		/// <param name="calculationResult">Current calculation result</param>
-		public delegate void ResultValueEditor(StatTypeEnum type, double value, CalculationResult calculationResult);
-
-		/// <summary>
 		/// Result modification handler
 		/// </summary>
-		private ResultValueEditor ApplyStatValue;
+		private ResultValueEditor applyStatValue;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="ToonCalculator" /> class
@@ -23,7 +18,15 @@ namespace Talented.Calculator.Logic
 		/// <param name="applyStatValue">Result modification function</param>
 		public ToonCalculator(ResultValueEditor applyStatValue)
 		{
-			ApplyStatValue = applyStatValue;
+			this.applyStatValue = applyStatValue;
 		}
+
+		/// <summary>
+		/// Apply specific stat value to calculation result
+		/// </summary>
+		/// <param name="type">Stat type</param>
+		/// <param name="value">Stat value</param>
+		/// <param name="calculationResult">Current calculation result</param>
+		public delegate void ResultValueEditor(StatTypeEnum type, double value, CalculationResult calculationResult);
 	}
 }
