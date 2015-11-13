@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Talented.Entities;
 using Talented.Entities.Talents;
 
 namespace Talented.Calculator.Logic
@@ -13,30 +14,28 @@ namespace Talented.Calculator.Logic
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TalentLevelChanger" /> class
 		/// </summary>
-		/// <param name="minLevel">Minimal possible talent level</param>
-		/// <param name="maxLevel">Maximal possible talent level</param>
-		public TalentLevelChanger(int minLevel, int maxLevel)
+		public TalentLevelChanger()
 		{
-			MinLevel = minLevel;
-			MaxLevel = maxLevel;
+			MinLevel = CastleConstants.TalentLevelMin;
+			MaxLevel = CastleConstants.TalentLevelMax;
 		}
 
 		/// <summary>
 		/// Gets or sets minimal possible talent level
 		/// </summary>
-		public int MinLevel { get; set; }
+		public byte MinLevel { get; set; }
 
 		/// <summary>
 		/// Gets or sets maximal possible talent level
 		/// </summary>
-		public int MaxLevel { get; set; }
+		public byte MaxLevel { get; set; }
 
 		/// <summary>
 		/// Change level for talent
 		/// </summary>
 		/// <param name="talent">Talent instance</param>
 		/// <param name="newLevel">Required level</param>
-		public void Change(Talent talent, int newLevel)
+		public void Change(Talent talent, byte newLevel)
 		{
 			if (talent == null)
 				throw new ArgumentNullException("talent");
@@ -51,7 +50,7 @@ namespace Talented.Calculator.Logic
 		/// </summary>
 		/// <param name="talents">List of talents</param>
 		/// <param name="newLevel">Required level</param>
-		public void Change(IEnumerable<Talent> talents, int newLevel)
+		public void Change(IEnumerable<Talent> talents, byte newLevel)
 		{
 			if (talents == null)
 				throw new ArgumentNullException("talents");

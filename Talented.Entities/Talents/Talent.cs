@@ -22,7 +22,7 @@ namespace Talented.Entities.Talents
 		/// <summary>
 		/// Gets or sets row number in the grid
 		/// </summary>
-		public int Tier { get; set; }
+		public byte Tier { get; set; }
 
 		/// <summary>
 		/// Gets or sets stats of current talent

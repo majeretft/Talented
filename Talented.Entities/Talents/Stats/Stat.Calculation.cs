@@ -16,7 +16,7 @@ namespace Talented.Entities.Talents.Stats
 		/// Change level for talent
 		/// </summary>
 		/// <param name="newLevel">Required level</param>
-		internal void ApplyLevel(int newLevel)
+		internal void ApplyLevel(byte newLevel)
 		{
 			switch (GrowType)
 			{

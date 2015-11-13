@@ -12,7 +12,7 @@ namespace Talented.Entities.Talents
 		/// Apply new level for talent
 		/// </summary>
 		/// <param name="newLevel">Required level</param>
-		public void ApplyLevel(int newLevel)
+		public void ApplyLevel(byte newLevel)
 		{
 			Stats
 				.Where(x => x.GrowType != Stat.GrowTypeEnum.None && x.Grow != 0)

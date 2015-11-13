@@ -35,9 +35,12 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CastleRuntime.cs" />
     <Compile Include="BattleRuntime.cs" />
+    <Compile Include="CalculationResult.cs" />
     <Compile Include="CastleConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatTypeEnum.cs" />
     <Compile Include="Talents\Stats\Stat.Calculation.cs" />
     <Compile Include="Talents\Stats\Stat.cs" />
     <Compile Include="Talents\Stats\Stat.Dependency.cs" />
@@ -47,6 +50,7 @@
     <Compile Include="Talents\Talent.cs" />
     <Compile Include="TerrainTypeEnum.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

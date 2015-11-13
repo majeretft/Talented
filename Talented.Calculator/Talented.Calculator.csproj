@@ -35,6 +35,8 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\CalculationException.cs" />
+    <Compile Include="Logic\TalentCalculator.cs" />
     <Compile Include="Logic\TalentConditionRelay.cs" />
     <Compile Include="Logic\TalentLevelChanger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
+using Talented.Entities;
 using Talented.Entities.Talents;
 using Talented.Entities.Talents.Stats;
 
@@ -100,7 +101,7 @@ namespace Talented.DataProvider.Model
 			stat.GrowType = (Stat.GrowTypeEnum)Enum.Parse(typeof(Stat.GrowTypeEnum), value, true);
 
 			value = element.Element("type").Value;
-			stat.Type = (Stat.TypeEnum)Enum.Parse(typeof(Stat.TypeEnum), value, true);
+			stat.Type = (StatTypeEnum)Enum.Parse(typeof(StatTypeEnum), value, true);
 
 			value = element.Element("initialValue").Value;
 			stat.ValueInitial = double.Parse(value);
