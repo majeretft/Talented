@@ -5,12 +5,12 @@ using Talented.Entities;
 using Talented.Entities.Talents;
 using Talented.Entities.Talents.Stats;
 
-namespace Talented.Calculator.Logic
+namespace Talented.Calculator.Logic.Talents
 {
 	/// <summary>
 	/// Upgrade talent value depending on environment (terrain type, time, ect.)
 	/// </summary>
-	public class TalentConditionRelay
+	internal class TalentConditionRelay
 	{
 		/// <summary>
 		/// Current battle settings

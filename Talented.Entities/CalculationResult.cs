@@ -64,5 +64,10 @@
 		/// Gets or sets magical resistance
 		/// </summary>
 		public double MagicalResistance { get; set; }
+
+		/// <summary>
+		/// Gets or sets might value
+		/// </summary>
+		public double Might { get; set; }
 	}
 }

@@ -4,13 +4,35 @@ using System.Linq;
 using Talented.Entities;
 using Talented.Entities.Talents;
 
-namespace Talented.Calculator.Logic
+namespace Talented.Calculator.Logic.Talents
 {
 	/// <summary>
 	/// Calculates stats given by all talents with applied levels and conditions
 	/// </summary>
-	public class TalentCalculator
+	internal class TalentCalculator
 	{
+		/// <summary>
+		/// Apply specific stat value to calculation result
+		/// </summary>
+		/// <param name="type">Stat type</param>
+		/// <param name="value">Stat value</param>
+		/// <param name="calculationResult">Current calculation result</param>
+		public delegate void ResultValueEditor(StatTypeEnum type, double value, CalculationResult calculationResult);
+
+		/// <summary>
+		/// Result modification handler
+		/// </summary>
+		private ResultValueEditor ApplyStatValue;
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="TalentCalculator" /> class
+		/// </summary>
+		/// <param name="applyStatValue">Result modification function</param>
+		public TalentCalculator(ResultValueEditor applyStatValue)
+		{
+			ApplyStatValue = applyStatValue;
+		}
+
 		/// <summary>
 		/// Calculate stats given by talents
 		/// </summary>
@@ -32,7 +54,11 @@ namespace Talented.Calculator.Logic
 
 			talentsUsed
 				.ToList()
-				.ForEach(x => x.Stats.ForEach(y => ApplyStatValue(y.Type, y.Value, result)));
+				.ForEach(x =>
+				{
+					result.Might += x.Might;
+					x.Stats.ForEach(y => ApplyStatValue(y.Type, y.Value, result);
+				});
 
 			return result;
 		}
@@ -79,73 +105,6 @@ namespace Talented.Calculator.Logic
 			talentsUsed
 				.ToList()
 				.ForEach(x => level.Change(x, talentLevelDictionary.First(y => y.Key == x.Id).Value));
-		}
-
-		/*
-		/// <summary>
-		/// Apply stats distributed in castle
-		/// </summary>
-		/// <param name="castleStatsDictionary">Stats distributed in castle</param>
-		/// <param name="calculationResult">Current calculation result</param>
-		private void ApplyCastleStatsDistribution(IDictionary<StatTypeEnum, byte> castleStatsDictionary, CalculationResult calculationResult)
-		{
-			if (castleStatsDictionary == null)
-				throw new ArgumentNullException("castleStatsDictionary");
-			if (calculationResult == null)
-				throw new ArgumentNullException("calculationResult");
-
-			castleStatsDictionary
-				.ToList()
-				.ForEach(y => ApplyStatValue(y.Key, y.Value, calculationResult));
-		}
-		*/
-
-		/// <summary>
-		/// Apply specific stat value to calculation result
-		/// </summary>
-		/// <param name="type">Stat type</param>
-		/// <param name="value">Stat value</param>
-		/// <param name="calculationResult">Current calculation result</param>
-		private void ApplyStatValue(StatTypeEnum type, double value, CalculationResult calculationResult)
-		{
-			if (calculationResult == null)
-				throw new ArgumentNullException("calculationResult");
-
-			switch (type)
-			{
-				case StatTypeEnum.Agility:
-					calculationResult.Agility += value;
-					break;
-				case StatTypeEnum.Attack:
-					calculationResult.Attack += value;
-					break;
-				case StatTypeEnum.Cunning:
-					calculationResult.Cunning += value;
-					break;
-				case StatTypeEnum.Durability:
-					calculationResult.Durability += value;
-					break;
-				case StatTypeEnum.Health:
-					calculationResult.Health += value;
-					break;
-				case StatTypeEnum.HealthSteal:
-					calculationResult.HealthSteal += value;
-					break;
-				case StatTypeEnum.Moveement:
-					calculationResult.Moveement += value;
-					break;
-				case StatTypeEnum.RegenerationHP:
-					calculationResult.RegenerationHP += value;
-					break;
-				case StatTypeEnum.RegenerationMP:
-					calculationResult.RegenerationMP += value;
-					break;
-				case StatTypeEnum.Will:
-					calculationResult.Will += value;
-					break;
-				default:
-					throw new CalculationException("Found talent with unsupported type");
-			}
 		}
 
 		/// <summary>

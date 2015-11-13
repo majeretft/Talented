@@ -30,10 +30,10 @@ namespace Talented.DataProvider.Model
 			result.Id = Guid.Parse(value);
 
 			value = element.Element("might").Value;
-			result.Might = int.Parse(value);
+			result.MightInitial = int.Parse(value);
 
 			value = element.Element("tier").Value;
-			result.Might = int.Parse(value);
+			result.MightInitial = int.Parse(value);
 
 			result.Stats = new List<Stat>();
 			var statElements = element.Element("stats").Elements().ToList();

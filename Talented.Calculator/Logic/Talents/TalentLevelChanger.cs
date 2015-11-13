@@ -4,12 +4,12 @@ using System.Linq;
 using Talented.Entities;
 using Talented.Entities.Talents;
 
-namespace Talented.Calculator.Logic
+namespace Talented.Calculator.Logic.Talents
 {
 	/// <summary>
 	/// Upgrade talent value depending on level
 	/// </summary>
-	public class TalentLevelChanger
+	internal class TalentLevelChanger
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="TalentLevelChanger" /> class

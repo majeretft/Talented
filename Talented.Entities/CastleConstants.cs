@@ -6,6 +6,11 @@
 	public static class CastleConstants
 	{
 		/// <summary>
+		/// Talent might grow coefficient (per level)
+		/// </summary>
+		public const double MightGrow = 0.075;
+
+		/// <summary>
 		/// Talent level min
 		/// </summary>
 		public const byte TalentLevelMin = 1;

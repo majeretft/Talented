@@ -15,9 +15,9 @@ namespace Talented.Entities.Talents
 		public Guid Id { get; set; }
 
 		/// <summary>
-		/// Gets or sets Might value
+		/// Gets or sets initial might value
 		/// </summary>
-		public double Might { get; set; }
+		public double MightInitial { get; set; }
 
 		/// <summary>
 		/// Gets or sets row number in the grid

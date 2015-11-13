@@ -35,15 +35,18 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\Calculator.cs" />
     <Compile Include="Logic\CalculationException.cs" />
-    <Compile Include="Logic\TalentCalculator.cs" />
-    <Compile Include="Logic\TalentConditionRelay.cs" />
-    <Compile Include="Logic\TalentLevelChanger.cs" />
+    <Compile Include="Logic\CommonFunctions.cs" />
+    <Compile Include="Logic\DependentPropertiesCaclulator.cs" />
+    <Compile Include="Logic\StatDistributionCalculator.cs" />
+    <Compile Include="Logic\Talents\TalentCalculator.cs" />
+    <Compile Include="Logic\Talents\TalentConditionRelay.cs" />
+    <Compile Include="Logic\Talents\TalentLevelChanger.cs" />
+    <Compile Include="Logic\ToonCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AI\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Talented.Entities\Talented.Entities.csproj">
       <Project>{71aaad24-4c57-45fd-b85f-06173f5de8ce}</Project>
