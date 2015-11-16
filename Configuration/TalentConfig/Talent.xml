@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <talent id="6f779e8f-11d6-4e10-965d-6eeabf465d49">
-	<might>350</might>
+	<mightInitial>36</mightInitial>
 	<tier>1</tier>
 	<stats>
 		<stat growType="Static">
 			<type>Agility</type>
-			<initialValue>4.25</initialValue>
+			<valueInitial>4.25</valueInitial>
 			<grow>0.25</grow>
 		</stat>
 		<stat growType="Static">

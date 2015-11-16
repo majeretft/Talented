@@ -43,7 +43,7 @@
     <Compile Include="Logic\Talents\TalentCalculator.cs" />
     <Compile Include="Logic\Talents\TalentConditionRelay.cs" />
     <Compile Include="Logic\Talents\TalentLevelChanger.cs" />
-    <Compile Include="Logic\ToonCalculator.cs" />
+    <Compile Include="Logic\Toons\ToonCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -11,21 +11,21 @@ namespace Talented.Entities
 		/// <summary>
 		/// Independent of terrain (default)
 		/// </summary>
-		None = 0x00,
+		None = 0x0,
 
 		/// <summary>
 		/// Native terrain
 		/// </summary>
-		Native = 0x01,
+		Native = 0x1,
 
 		/// <summary>
 		/// Neutral terrain
 		/// </summary>
-		Neutral = 0x10,
+		Neutral = 0x2,
 
 		/// <summary>
 		/// Other team terrain
 		/// </summary>
-		Foreign = 0x11
+		Foreign = 0x4
 	}
 }

@@ -36,22 +36,26 @@ namespace Talented.Calculator.Logic.Talents
 		/// <summary>
 		/// Calculate stats given by talents
 		/// </summary>
-		/// <param name="talents">All talents</param>
-		/// <param name="castleContext">Castle settings</param>
+		/// <param name="talentsUsed">Used talents</param>
+		/// <param name="talentLevelDistribution">Levels for used talents</param>
 		/// <param name="battleContext">Battle conditions description</param>
 		/// <param name="calculationResult">Processing calculation result</param>
-		public void Calculate(IEnumerable<Talent> talents, CastleRuntime castleContext, BattleRuntime battleContext, CalculationResult calculationResult)
+		public void Calculate(IEnumerable<Talent> talentsUsed, IDictionary<Guid, byte> talentLevelDistribution, BattleRuntime battleContext, CalculationResult calculationResult)
 		{
-			if (castleContext == null)
-				throw new ArgumentNullException("castleContext");
+			if (talentLevelDistribution == null)
+				throw new ArgumentNullException("talentLevelDistribution");
 			if (calculationResult == null)
 				throw new ArgumentNullException("calculationResult");
+			if (talentsUsed == null)
+				throw new ArgumentNullException("talentsUsed");
 
-			var talentsUsed = GetUsedTalents(talents, castleContext.TalentLevelDictionary);
+			// Append stats given by talent levels
+			ApplyCastleContext(talentsUsed, talentLevelDistribution);
 
-			ApplyCastleContext(talentsUsed, castleContext.TalentLevelDictionary);
+			// Append stats given by special conditions (like native land)
 			ApplyBattleContext(talentsUsed, battleContext);
 
+			// Append all values to final result
 			talentsUsed
 				.ToList()
 				.ForEach(x =>
@@ -103,23 +107,6 @@ namespace Talented.Calculator.Logic.Talents
 			talentsUsed
 				.ToList()
 				.ForEach(x => level.Change(x, talentLevelDictionary.First(y => y.Key == x.Id).Value));
-		}
-
-		/// <summary>
-		/// Get uses talents from all talents
-		/// </summary>
-		/// <param name="talents">All talents</param>
-		/// <param name="talentLevelDictionary">Used talents levels</param>
-		/// <returns>Used talents</returns>
-		private IEnumerable<Talent> GetUsedTalents(IEnumerable<Talent> talents, IDictionary<Guid, byte> talentLevelDictionary)
-		{
-			if (talents == null)
-				throw new ArgumentNullException("talents");
-			if (talentLevelDictionary == null)
-				throw new ArgumentNullException("talentLevelDictionary");
-
-			var ids = talentLevelDictionary.Select(x => x.Key);
-			return new List<Talent>(talents.Where(x => ids.Contains(x.Id)));
 		}
 	}
 }

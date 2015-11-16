@@ -33,16 +33,6 @@
 		}
 
 		/// <summary>
-		/// Gets or sets current stat type
-		/// </summary>
-		public StatTypeEnum Type { get; set; }
-
-		/// <summary>
-		/// Gets or sets base value of current stat
-		/// </summary>
-		public double ValueInitial { get; set; }
-
-		/// <summary>
 		/// Gets or sets grow value per level of talent
 		/// Expected types: double, array[max level]
 		/// </summary>
@@ -52,5 +42,15 @@
 		/// Gets or sets treatment method for Grow property
 		/// </summary>
 		public GrowTypeEnum GrowType { get; set; }
+
+		/// <summary>
+		/// Gets or sets current stat type
+		/// </summary>
+		public StatTypeEnum Type { get; set; }
+
+		/// <summary>
+		/// Gets or sets base value of current stat
+		/// </summary>
+		public double ValueInitial { get; set; }
 	}
 }

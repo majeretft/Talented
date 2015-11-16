@@ -25,7 +25,7 @@ namespace Talented.Calculator.Logic
 		}
 
 		/// <summary>
-		/// Apply specific stat value to calculation result
+		/// Append specific stat value to calculation result
 		/// </summary>
 		/// <param name="type">Stat type</param>
 		/// <param name="value">Stat value</param>
@@ -33,11 +33,11 @@ namespace Talented.Calculator.Logic
 		public delegate void ResultValueEditor(StatTypeEnum type, double value, CalculationResult calculationResult);
 
 		/// <summary>
-		/// Apply stats distributed in castle
+		/// Append stats distributed in castle
 		/// </summary>
 		/// <param name="castleStatsDictionary">Stats distributed in castle</param>
 		/// <param name="calculationResult">Current calculation result</param>
-		private void ApplyCastleStatsDistribution(IDictionary<StatTypeEnum, byte> castleStatsDictionary, CalculationResult calculationResult)
+		public void ApplyCastleStatsDistribution(IDictionary<StatTypeEnum, byte> castleStatsDictionary, CalculationResult calculationResult)
 		{
 			if (castleStatsDictionary == null)
 				throw new ArgumentNullException("castleStatsDictionary");

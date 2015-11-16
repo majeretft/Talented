@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Talented.DataProvider.Model
+﻿namespace Talented.DataProvider.Model
 {
-	class EnvironmentParser
+	/// <summary>
+	/// For feature usage
+	/// </summary>
+	public class EnvironmentParser
 	{
 	}
 }

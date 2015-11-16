@@ -66,6 +66,11 @@
 		RegenerationMP,
 
 		/// <summary>
+		/// Strength value
+		/// </summary>
+		Strength,
+
+		/// <summary>
 		/// Magical protection
 		/// </summary>
 		Will

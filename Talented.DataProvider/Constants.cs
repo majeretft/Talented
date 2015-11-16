@@ -10,17 +10,17 @@ namespace Talented.DataProvider
 		/// <summary>
 		/// Data relative path
 		/// </summary>
-		public const string DataPath = "/Configuration";
+		public const string DataFolder = "Configuration";
 
 		/// <summary>
 		/// Talents data relative part of path
 		/// </summary>
-		public const string TalentPath = "/TalentConfig";
+		public const string TalentFolder = "TalentConfig";
 
 		/// <summary>
 		/// Toon data relative part of path
 		/// </summary>
-		public const string ToonPath = "/ToonConfig";
+		public const string ToonFolder = "ToonConfig";
 
 		/// <summary>
 		/// Gets talent data relative path
@@ -29,7 +29,7 @@ namespace Talented.DataProvider
 		{
 			get
 			{
-				return Path.Combine(DataPath, TalentPath);
+				return Path.Combine(DataFolder, TalentFolder);
 			}
 		}
 
@@ -40,7 +40,7 @@ namespace Talented.DataProvider
 		{
 			get
 			{
-				return Path.Combine(DataPath, ToonPath);
+				return Path.Combine(DataFolder, ToonFolder);
 			}
 		}
 	}

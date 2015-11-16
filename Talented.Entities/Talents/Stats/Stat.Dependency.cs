@@ -18,7 +18,7 @@ namespace Talented.Entities.Talents.Stats
 		public double ValueAdditional { get; set; }
 
 		/// <summary>
-		/// Applies additional value if condition is satisfied
+		/// Append additional value if condition is satisfied
 		/// </summary>
 		/// <param name="context">Current battle settings</param>
 		internal virtual void ApplyCondition(BattleRuntime context)

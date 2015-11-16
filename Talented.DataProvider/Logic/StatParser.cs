@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Xml.Linq;
 using Talented.Entities;
 using Talented.Entities.Talents.Stats;
@@ -88,11 +89,11 @@ namespace Talented.DataProvider.Logic
 			value = element.Element("type").Value;
 			stat.Type = (StatTypeEnum)Enum.Parse(typeof(StatTypeEnum), value, true);
 
-			value = element.Element("initialValue").Value;
-			stat.ValueInitial = double.Parse(value);
+			value = element.Element("valueInitial").Value;
+			stat.ValueInitial = double.Parse(value, CultureInfo.InvariantCulture);
 
 			value = element.Element("grow").Value;
-			stat.Grow = double.Parse(value);
+			stat.Grow = double.Parse(value, CultureInfo.InvariantCulture);
 		}
 
 		/// <summary>
@@ -109,11 +110,11 @@ namespace Talented.DataProvider.Logic
 
 			string value;
 
-			value = element.Attribute("dependency").Value;
+			value = element.Element("dependency").Value;
 			stat.Dependency = (StatDependencyEnum)Enum.Parse(typeof(StatDependencyEnum), value, true);
 
 			value = element.Element("valueAdditional").Value;
-			stat.ValueAdditional = double.Parse(value);
+			stat.ValueAdditional = double.Parse(value, CultureInfo.InvariantCulture);
 		}
 
 		/// <summary>
@@ -128,7 +129,7 @@ namespace Talented.DataProvider.Logic
 			if (stat == null)
 				throw new ArgumentNullException("stat");
 
-			var value = element.Attribute("dependency").Value;
+			var value = element.Element("dependency").Value;
 			stat.Dependency = (StatDependencyEnum)Enum.Parse(typeof(StatDependencyEnum), value, true);
 		}
 
@@ -145,7 +146,7 @@ namespace Talented.DataProvider.Logic
 				throw new ArgumentNullException("stat");
 
 			var value = element.Element("growMight").Value;
-			stat.GrowMight = double.Parse(value);
+			stat.GrowMight = double.Parse(value, CultureInfo.InvariantCulture);
 		}
 	}
 }

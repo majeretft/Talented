@@ -39,6 +39,12 @@ namespace Talented.Calculator.Logic
 				case StatTypeEnum.HealthSteal:
 					calculationResult.HealthSteal += value;
 					break;
+				case StatTypeEnum.Intelligence:
+					calculationResult.Intelligence += value;
+					break;
+				case StatTypeEnum.Mana:
+					calculationResult.Mana += value;
+					break;
 				case StatTypeEnum.Moveement:
 					calculationResult.Moveement += value;
 					break;
@@ -48,11 +54,14 @@ namespace Talented.Calculator.Logic
 				case StatTypeEnum.RegenerationMP:
 					calculationResult.RegenerationMP += value;
 					break;
+				case StatTypeEnum.Strength:
+					calculationResult.Strength += value;
+					break;
 				case StatTypeEnum.Will:
 					calculationResult.Will += value;
 					break;
 				default:
-					throw new CalculationException("Found talent with unsupported type");
+					throw new CalculationException(string.Format("Found unsupported stat type: {0}", type));
 			}
 		}
 	}

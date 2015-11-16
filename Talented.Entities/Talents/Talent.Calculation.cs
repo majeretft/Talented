@@ -15,7 +15,7 @@ namespace Talented.Entities.Talents
 		public double Might { get; set; }
 
 		/// <summary>
-		/// Apply new level for talent
+		/// Change level of a talent
 		/// </summary>
 		/// <param name="newLevel">Required level</param>
 		public void ApplyLevel(byte newLevel)
@@ -29,7 +29,7 @@ namespace Talented.Entities.Talents
 		}
 
 		/// <summary>
-		/// Apply new condition for talent
+		/// Append additional value if condition is satisfied
 		/// </summary>
 		/// <param name="context">Condition parameters</param>
 		public void ApplyCondition(BattleRuntime context)
@@ -38,7 +38,7 @@ namespace Talented.Entities.Talents
 				throw new ArgumentNullException("context");
 
 			Stats
-				.Where(x => x.GrowType != Stat.GrowTypeEnum.None && x.Grow != 0)
+				.Where(x => x.ValueAdditional != 0)
 				.ToList()
 				.ForEach(x => x.ApplyCondition(context));
 		}

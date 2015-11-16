@@ -17,11 +17,11 @@ namespace Talented.Entities.Toons
 		/// <summary>
 		/// Gets or sets list of initial characteristics
 		/// </summary>
-		public List<ToonStat> InitialStats { get; set; }
+		public IEnumerable<ToonStat> InitialStats { get; set; }
 
 		/// <summary>
 		/// Gets or sets list of initial talents
 		/// </summary>
-		public List<Guid> InitialTalents { get; set; }
+		public IEnumerable<Guid> InitialTalents { get; set; }
 	}
 }

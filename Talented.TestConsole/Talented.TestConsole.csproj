@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{02A170DE-9B53-45CE-9054-CAB97541742E}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{8A85D2F5-6C0E-46AF-A187-F6C5371CC0C9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Talented.DataProvider</RootNamespace>
-    <AssemblyName>Talented.DataProvider</AssemblyName>
+    <RootNamespace>Talented.TestConsole</RootNamespace>
+    <AssemblyName>Talented.TestConsole</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -37,23 +40,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AI\InitialDataReader.cs" />
-    <Compile Include="Constants.cs" />
-    <Compile Include="Logic\EnvironmentParser.cs" />
-    <Compile Include="Logic\StatParser.cs" />
-    <Compile Include="Logic\TalentParser.cs" />
-    <Compile Include="Logic\ToonParser.cs" />
-    <Compile Include="Logic\Files\XDocumentProvider.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="Model\" />
+    <Folder Include="View\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Talented.Calculator\Talented.Calculator.csproj">
+      <Project>{826ce028-02b2-4545-9422-e61b39e660f5}</Project>
+      <Name>Talented.Calculator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Talented.DataProvider\Talented.DataProvider.csproj">
+      <Project>{02a170de-9b53-45ce-9054-cab97541742e}</Project>
+      <Name>Talented.DataProvider</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Talented.Entities\Talented.Entities.csproj">
       <Project>{71aaad24-4c57-45fd-b85f-06173f5de8ce}</Project>
       <Name>Talented.Entities</Name>
-      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(SolutionDir)Configuration" "$(TargetDir)Configuration" /E /C /I /F /R /Y</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -36,9 +36,19 @@
 		public double HealthSteal { get; set; }
 
 		/// <summary>
+		/// Gets or sets intelligence value
+		/// </summary>
+		public double Intelligence { get; set; }
+
+		/// <summary>
 		/// Gets or sets magical resistance
 		/// </summary>
 		public double MagicalResistance { get; set; }
+
+		/// <summary>
+		/// Gets or sets energy value
+		/// </summary>
+		public double Mana { get; set; }
 
 		/// <summary>
 		/// Gets or sets might value
@@ -64,6 +74,11 @@
 		/// Gets or sets energy regeneration value
 		/// </summary>
 		public double RegenerationMP { get; set; }
+
+		/// <summary>
+		/// Gets or sets strength value
+		/// </summary>
+		public double Strength { get; set; }
 
 		/// <summary>
 		/// Gets or sets magical protection

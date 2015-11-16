@@ -29,10 +29,11 @@ namespace Talented.DataProvider.Model
 			var value = element.Attribute("id").Value;
 			result.Id = Guid.Parse(value);
 
-			result.InitialStats = new List<ToonStat>();
+			var initialStats = new List<ToonStat>();
 			var statParser = new StatParser();
 			var statElements = element.Element("stats").Elements().ToList();
-			statElements.ForEach(x => result.InitialStats.Add(statParser.ParseToonStat(x)));
+			statElements.ForEach(x => initialStats.Add(statParser.ParseToonStat(x)));
+			result.InitialStats = initialStats;
 
 			return result;
 		}

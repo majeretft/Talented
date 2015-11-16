@@ -6,67 +6,67 @@
 	<stats>
 		<stat growType="Static">
 			<type>Agility</type>
-			<initialValue>52</initialValue>
+			<valueInitial>52</valueInitial>
 			<grow>0.3</grow>
 			<growMight>6</growMight>
 		</stat>
 		<stat growType="Static">
 			<type>Durability</type>
-			<initialValue>55</initialValue>
+			<valueInitial>55</valueInitial>
 			<grow>0.8</grow>
 			<growMight>16</growMight>
 		</stat>
 		<stat growType="Static">
 			<type>Cunning</type>
-			<initialValue>56</initialValue>
+			<valueInitial>56</valueInitial>
 			<grow>0.4</grow>
 			<growMight>8</growMight>
 		</stat>
 		<stat growType="Static">
 			<type>Health</type>
-			<initialValue>675</initialValue>
+			<valueInitial>675</valueInitial>
 			<grow>25</grow>
 			<growMight>20</growMight>
 		</stat>
 		<stat growType="Static">
 			<type>Intelligence</type>
-			<initialValue>58</initialValue>
+			<valueInitial>58</valueInitial>
 			<grow>0.75</grow>
 			<growMight>15</growMight>
 		</stat>
 		<stat growType="Static">
 			<type>Mana</type>
-			<initialValue>750</initialValue>
+			<valueInitial>750</valueInitial>
 			<grow>14.75</grow>
 			<growMight>11.8</growMight>
 		</stat>
 		<stat growType="None">
 			<type>Moveement</type>
-			<initialValue>50</initialValue>
+			<valueInitial>50</valueInitial>
 			<grow>0</grow>
 			<growMight>0</growMight>
 		</stat>
 		<stat growType="None">
 			<type>RegenerationHP</type>
-			<initialValue>0</initialValue>
+			<valueInitial>0</valueInitial>
 			<grow>0</grow>
 			<growMight>0</growMight>
 		</stat>
 		<stat growType="None">
 			<type>RegenerationMP</type>
-			<initialValue>0</initialValue>
+			<valueInitial>0</valueInitial>
 			<grow>0</grow>
 			<growMight>0</growMight>
 		</stat>
 		<stat growType="Static">
 			<type>Strength</type>
-			<initialValue>55</initialValue>
+			<valueInitial>55</valueInitial>
 			<grow>0.5</grow>
 			<growMight>10</growMight>
 		</stat>
 		<stat growType="Static">
 			<type>Will</type>
-			<initialValue>53</initialValue>
+			<valueInitial>53</valueInitial>
 			<grow>0.5</grow>
 			<growMight>10</growMight>
 		</stat>

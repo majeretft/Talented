@@ -48,7 +48,6 @@ namespace Talented.Calculator.Logic.Talents
 				throw new ArgumentNullException("talents");
 
 			talents
-				.Where(x => x.Stats.Any(y => !(y is Stat)))
 				.ToList()
 				.ForEach(x => Change(x));
 		}
