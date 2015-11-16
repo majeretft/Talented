@@ -37,7 +37,7 @@ namespace Talented.Calculator.Logic
 		/// </summary>
 		/// <param name="castleStatsDictionary">Stats distributed in castle</param>
 		/// <param name="calculationResult">Current calculation result</param>
-		public void ApplyCastleStatsDistribution(IDictionary<StatTypeEnum, byte> castleStatsDictionary, CalculationResult calculationResult)
+		public void Calculate(IDictionary<StatTypeEnum, byte> castleStatsDictionary, CalculationResult calculationResult)
 		{
 			if (castleStatsDictionary == null)
 				throw new ArgumentNullException("castleStatsDictionary");

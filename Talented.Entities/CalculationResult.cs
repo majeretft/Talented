@@ -13,7 +13,12 @@
 		/// <summary>
 		/// Gets or sets attack power
 		/// </summary>
-		public double Attack { get; set; }
+		public double AttackPower { get; set; }
+
+		/// <summary>
+		/// Gets or sets hits per second
+		/// </summary>
+		public double AttackSpeed { get; set; }
 
 		/// <summary>
 		/// Gets or sets cunning value
@@ -58,7 +63,7 @@
 		/// <summary>
 		/// Gets or sets movement speed
 		/// </summary>
-		public double Moveement { get; set; }
+		public double MovementSpeed { get; set; }
 
 		/// <summary>
 		/// Gets or sets physical resistance

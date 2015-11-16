@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <toon id="dfa1673e-4c53-4f63-97df-876948b8b3a7">
-	<talents>
-		<talent id="6f779e8f-11d6-4e10-965d-6eeabf465d49"/>
-	</talents>
+	<mainStat>Strength</mainStat>
 	<stats>
 		<stat growType="Static">
 			<type>Agility</type>

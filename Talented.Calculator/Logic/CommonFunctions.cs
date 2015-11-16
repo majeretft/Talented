@@ -25,7 +25,7 @@ namespace Talented.Calculator.Logic
 					calculationResult.Agility += value;
 					break;
 				case StatTypeEnum.Attack:
-					calculationResult.Attack += value;
+					calculationResult.AttackPower += value;
 					break;
 				case StatTypeEnum.Cunning:
 					calculationResult.Cunning += value;
@@ -46,7 +46,7 @@ namespace Talented.Calculator.Logic
 					calculationResult.Mana += value;
 					break;
 				case StatTypeEnum.Moveement:
-					calculationResult.Moveement += value;
+					calculationResult.MovementSpeed += value;
 					break;
 				case StatTypeEnum.RegenerationHP:
 					calculationResult.RegenerationHP += value;

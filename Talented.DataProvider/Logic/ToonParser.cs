@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 using Talented.DataProvider.Logic;
+using Talented.Entities;
 using Talented.Entities.Talents.Stats;
 using Talented.Entities.Toons;
 
@@ -11,7 +12,7 @@ namespace Talented.DataProvider.Model
 	/// <summary>
 	/// Toon initial data parser
 	/// </summary>
-	public class ToonParser
+	internal class ToonParser
 	{
 		/// <summary>
 		/// Get new toon instance from Xml
@@ -28,6 +29,9 @@ namespace Talented.DataProvider.Model
 
 			var value = element.Attribute("id").Value;
 			result.Id = Guid.Parse(value);
+
+			value = element.Element("mainStat").Value;
+			result.MainAttackStat = (StatTypeEnum)Enum.Parse(typeof(StatTypeEnum), value, true);
 
 			var initialStats = new List<ToonStat>();
 			var statParser = new StatParser();

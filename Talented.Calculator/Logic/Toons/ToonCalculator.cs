@@ -100,6 +100,8 @@ namespace Talented.Calculator.Logic.Toons
 
 			double result;
 
+			var growCoeff = initialStat.GrowMight / initialStat.Grow / 100;
+
 			switch (initialStat.Type)
 			{
 				case StatTypeEnum.Agility:
@@ -109,16 +111,14 @@ namespace Talented.Calculator.Logic.Toons
 				case StatTypeEnum.Strength:
 				case StatTypeEnum.Will:
 					{
-						var q = 5 * initialStat.GrowMight / initialStat.Grow / 100;
-						result = q;
+						result = 5 * growCoeff;
 						break;
 					}
 
 				case StatTypeEnum.Health:
 				case StatTypeEnum.Mana:
 					{
-						var q = 25 * initialStat.GrowMight / initialStat.Grow / 100;
-						result = q;
+						result = 25 * growCoeff;
 						break;
 					}
 

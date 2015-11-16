@@ -66,7 +66,11 @@ namespace Talented.Calculator.AI
 
 			// Calculate and append stats distributed in castle (such as guild bonuses, stats for character level, ect.)
 			var sdc = new StatDistributionCalculator(commonFunctions.ApplyStatValue);
-			sdc.ApplyCastleStatsDistribution(castle.CastleStatDistribution, cr);
+			sdc.Calculate(castle.CastleStatDistribution, cr);
+
+			// Calculate and append values of dependent properties
+			var dpc = new DependentPropertiesCaclulator();
+			dpc.Calculate(cr);
 
 			return cr;
 		}

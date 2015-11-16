@@ -5,7 +5,7 @@ namespace Talented.DataProvider
 	/// <summary>
 	/// Data provider settings
 	/// </summary>
-	public static class Constants
+	internal static class Constants
 	{
 		/// <summary>
 		/// Data relative path

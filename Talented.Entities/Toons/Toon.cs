@@ -23,5 +23,10 @@ namespace Talented.Entities.Toons
 		/// Gets or sets list of initial talents
 		/// </summary>
 		public IEnumerable<Guid> InitialTalents { get; set; }
+
+		/// <summary>
+		/// Gets or sets character main stat for attack power
+		/// </summary>
+		public StatTypeEnum MainAttackStat { get; set; }
 	}
 }

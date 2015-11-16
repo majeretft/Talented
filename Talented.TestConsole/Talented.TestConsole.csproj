@@ -46,11 +46,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Model\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Talented.Calculator\Talented.Calculator.csproj">
       <Project>{826ce028-02b2-4545-9422-e61b39e660f5}</Project>
