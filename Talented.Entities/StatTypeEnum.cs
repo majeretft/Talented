@@ -41,6 +41,16 @@
 		HealthSteal,
 
 		/// <summary>
+		/// Intelligence value
+		/// </summary>
+		Intelligence,
+
+		/// <summary>
+		/// Energy value
+		/// </summary>
+		Mana,
+
+		/// <summary>
 		/// Movement speed
 		/// </summary>
 		Moveement,

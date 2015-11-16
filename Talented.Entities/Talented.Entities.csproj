@@ -46,9 +46,11 @@
     <Compile Include="Talents\Stats\Stat.Dependency.cs" />
     <Compile Include="Talents\Stats\StatDependencyEnum.cs" />
     <Compile Include="Talents\Stats\StatTerrain.cs" />
+    <Compile Include="Talents\Stats\ToonStat.cs" />
     <Compile Include="Talents\Talent.Calculation.cs" />
     <Compile Include="Talents\Talent.cs" />
     <Compile Include="TerrainTypeEnum.cs" />
+    <Compile Include="Toons\Toon.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

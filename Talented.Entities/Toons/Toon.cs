@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using Talented.Entities.Talents.Stats;
+
+namespace Talented.Entities.Toons
+{
+	/// <summary>
+	/// Represents a single toon
+	/// </summary>
+	public class Toon
+	{
+		/// <summary>
+		/// Gets or sets unique identifier
+		/// </summary>
+		public Guid Id { get; set; }
+
+		/// <summary>
+		/// Gets or sets list of initial characteristics
+		/// </summary>
+		public List<ToonStat> InitialStats { get; set; }
+
+		/// <summary>
+		/// Gets or sets list of initial talents
+		/// </summary>
+		public List<Guid> InitialTalents { get; set; }
+	}
+}

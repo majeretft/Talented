@@ -43,7 +43,7 @@
 		public double ValueInitial { get; set; }
 
 		/// <summary>
-		/// Gets or sets grow percentage per level of talent
+		/// Gets or sets grow value per level of talent
 		/// Expected types: double, array[max level]
 		/// </summary>
 		public dynamic Grow { get; set; }

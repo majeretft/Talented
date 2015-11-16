@@ -1,33 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <toon id="dfa1673e-4c53-4f63-97df-876948b8b3a7">
+	<talents>
+		<talent id="6f779e8f-11d6-4e10-965d-6eeabf465d49"/>
+	</talents>
 	<stats>
-		<stat>
+		<stat growType="Static">
 			<type>Agility</type>
-			<initialValue>4.25</initialValue>
+			<initialValue>52</initialValue>
+			<grow>0.3</grow>
+			<growMight>6</growMight>
 		</stat>
-		<stat>
+		<stat growType="Static">
 			<type>Durability</type>
-			<initialValue>4.25</initialValue>
+			<initialValue>55</initialValue>
+			<grow>0.8</grow>
+			<growMight>16</growMight>
 		</stat>
-		<stat>
+		<stat growType="Static">
 			<type>Cunning</type>
-			<initialValue>4.25</initialValue>
+			<initialValue>56</initialValue>
+			<grow>0.4</grow>
+			<growMight>8</growMight>
 		</stat>
-		<stat>
+		<stat growType="Static">
 			<type>Health</type>
-			<initialValue>4.25</initialValue>
+			<initialValue>675</initialValue>
+			<grow>25</grow>
+			<growMight>20</growMight>
 		</stat>
-		<stat>
+		<stat growType="Static">
+			<type>Intelligence</type>
+			<initialValue>58</initialValue>
+			<grow>0.75</grow>
+			<growMight>15</growMight>
+		</stat>
+		<stat growType="Static">
+			<type>Mana</type>
+			<initialValue>750</initialValue>
+			<grow>14.75</grow>
+			<growMight>11.8</growMight>
+		</stat>
+		<stat growType="None">
 			<type>Moveement</type>
-			<initialValue>4.25</initialValue>
+			<initialValue>50</initialValue>
+			<grow>0</grow>
+			<growMight>0</growMight>
 		</stat>
-		<stat>
+		<stat growType="None">
 			<type>RegenerationHP</type>
-			<initialValue>4.25</initialValue>
+			<initialValue>0</initialValue>
+			<grow>0</grow>
+			<growMight>0</growMight>
 		</stat>
-		<stat>
+		<stat growType="None">
 			<type>RegenerationMP</type>
-			<initialValue>4.25</initialValue>
+			<initialValue>0</initialValue>
+			<grow>0</grow>
+			<growMight>0</growMight>
+		</stat>
+		<stat growType="Static">
+			<type>Strength</type>
+			<initialValue>55</initialValue>
+			<grow>0.5</grow>
+			<growMight>10</growMight>
+		</stat>
+		<stat growType="Static">
+			<type>Will</type>
+			<initialValue>53</initialValue>
+			<grow>0.5</grow>
+			<growMight>10</growMight>
 		</stat>
 	</stats>
 </toon>
