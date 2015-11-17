@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<toon id="dfa1673e-4c53-4f63-97df-876948b8b3a7">
+	<attackModifier>0.9</attackModifier>
+	<mainStat>Strength</mainStat>
+	<stats>
+		<stat growType="Static">
+			<type>Agility</type>
+			<valueInitial>52</valueInitial>
+			<grow>0.3</grow>
+			<growMight>6</growMight>
+		</stat>
+		<stat growType="Static">
+			<type>Durability</type>
+			<valueInitial>55</valueInitial>
+			<grow>0.8</grow>
+			<growMight>16</growMight>
+		</stat>
+		<stat growType="Static">
+			<type>Cunning</type>
+			<valueInitial>56</valueInitial>
+			<grow>0.4</grow>
+			<growMight>8</growMight>
+		</stat>
+		<stat growType="Static">
+			<type>Health</type>
+			<valueInitial>675</valueInitial>
+			<grow>25</grow>
+			<growMight>20</growMight>
+		</stat>
+		<stat growType="Static">
+			<type>Intelligence</type>
+			<valueInitial>58</valueInitial>
+			<grow>0.75</grow>
+			<growMight>15</growMight>
+		</stat>
+		<stat growType="Static">
+			<type>Mana</type>
+			<valueInitial>750</valueInitial>
+			<grow>14.75</grow>
+			<growMight>11.8</growMight>
+		</stat>
+		<stat growType="None">
+			<type>Moveement</type>
+			<valueInitial>50</valueInitial>
+			<grow>0</grow>
+			<growMight>0</growMight>
+		</stat>
+		<stat growType="None">
+			<type>RegenerationHP</type>
+			<valueInitial>0</valueInitial>
+			<grow>0</grow>
+			<growMight>0</growMight>
+		</stat>
+		<stat growType="None">
+			<type>RegenerationMP</type>
+			<valueInitial>0</valueInitial>
+			<grow>0</grow>
+			<growMight>0</growMight>
+		</stat>
+		<stat growType="Static">
+			<type>Strength</type>
+			<valueInitial>55</valueInitial>
+			<grow>0.5</grow>
+			<growMight>10</growMight>
+		</stat>
+		<stat growType="Static">
+			<type>Will</type>
+			<valueInitial>53</valueInitial>
+			<grow>0.5</grow>
+			<growMight>10</growMight>
+		</stat>
+	</stats>
+</toon>
