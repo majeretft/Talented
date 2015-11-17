@@ -11,14 +11,29 @@
 		public double Agility { get; set; }
 
 		/// <summary>
-		/// Gets or sets attack power
+		/// Gets or sets armor penetration value
 		/// </summary>
-		public double AttackPower { get; set; }
+		public double ArmorPenetration { get; set; }
+
+		/// <summary>
+		/// Gets or sets attack power low border value
+		/// </summary>
+		public double AttackPowerLow { get; set; }
+
+		/// <summary>
+		/// Gets or sets attack power top border value
+		/// </summary>
+		public double AttackPowerTop { get; set; }
 
 		/// <summary>
 		/// Gets or sets hits per second
 		/// </summary>
 		public double AttackSpeed { get; set; }
+
+		/// <summary>
+		/// Gets or sets critical chance value
+		/// </summary>
+		public double CritChance { get; set; }
 
 		/// <summary>
 		/// Gets or sets cunning value

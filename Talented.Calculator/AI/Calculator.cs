@@ -55,6 +55,7 @@ namespace Talented.Calculator.AI
 				throw new ArgumentNullException("castle");
 
 			var cr = new CalculationResult();
+			var currentToon = GetUsedToon(castle.Toon);
 
 			// Calculate and append stats provided by talents and its bonuses
 			var talc = new TalentCalculator(commonFunctions.ApplyStatValue);
@@ -62,7 +63,7 @@ namespace Talented.Calculator.AI
 
 			// Calculate and append stats provided by toon and talents might
 			var toonc = new ToonCalculator(commonFunctions.ApplyStatValue);
-			toonc.Calculate(GetUsedToon(castle.Toon), cr);
+			toonc.Calculate(currentToon, cr);
 
 			// Calculate and append stats distributed in castle (such as guild bonuses, stats for character level, ect.)
 			var sdc = new StatDistributionCalculator(commonFunctions.ApplyStatValue);
@@ -70,7 +71,7 @@ namespace Talented.Calculator.AI
 
 			// Calculate and append values of dependent properties
 			var dpc = new DependentPropertiesCaclulator();
-			dpc.Calculate(cr);
+			dpc.Calculate(cr, currentToon.MainAttackStat, currentToon.AttackModifier);
 
 			return cr;
 		}

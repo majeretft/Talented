@@ -24,8 +24,11 @@ namespace Talented.Calculator.Logic
 				case StatTypeEnum.Agility:
 					calculationResult.Agility += value;
 					break;
+
+				// This case is included here to append attack power provided by "icy bow" talent
 				case StatTypeEnum.Attack:
-					calculationResult.AttackPower += value;
+					calculationResult.AttackPowerLow += value;
+					calculationResult.AttackPowerTop += value;
 					break;
 				case StatTypeEnum.Cunning:
 					calculationResult.Cunning += value;

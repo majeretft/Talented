@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <toon id="dfa1673e-4c53-4f63-97df-876948b8b3a7">
+	<attackModifier>0.9</attackModifier>
 	<mainStat>Strength</mainStat>
 	<stats>
 		<stat growType="Static">

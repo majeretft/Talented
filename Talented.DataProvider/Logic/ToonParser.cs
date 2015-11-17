@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Xml.Linq;
 using Talented.DataProvider.Logic;
@@ -32,6 +33,9 @@ namespace Talented.DataProvider.Model
 
 			value = element.Element("mainStat").Value;
 			result.MainAttackStat = (StatTypeEnum)Enum.Parse(typeof(StatTypeEnum), value, true);
+
+			value = element.Element("attackModifier").Value;
+			result.AttackModifier = double.Parse(value, CultureInfo.InvariantCulture);
 
 			var initialStats = new List<ToonStat>();
 			var statParser = new StatParser();

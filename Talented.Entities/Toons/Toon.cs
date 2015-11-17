@@ -10,6 +10,11 @@ namespace Talented.Entities.Toons
 	public class Toon
 	{
 		/// <summary>
+		/// Gets or sets character main stat modifier for attack power (percentage)
+		/// </summary>
+		public double AttackModifier { get; set; }
+
+		/// <summary>
 		/// Gets or sets unique identifier
 		/// </summary>
 		public Guid Id { get; set; }

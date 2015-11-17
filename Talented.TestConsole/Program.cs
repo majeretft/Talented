@@ -5,7 +5,6 @@ using Talented.Entities;
 
 namespace Talented.TestConsole
 {
-	
 	using Calculator = Calculator.AI.Calculator;
 
 	public class Program
