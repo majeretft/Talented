@@ -11,6 +11,30 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talented.Calculator", "Tale
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talented.TestConsole", "Talented.TestConsole\Talented.TestConsole.csproj", "{8A85D2F5-6C0E-46AF-A187-F6C5371CC0C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talented.UI", "Talented.UI\Talented.UI.csproj", "{11E1B227-083F-4711-B095-0D98EFE09D41}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Talented.UIClient", "Talented.UIClient\", "{698D37EE-9047-4EA5-8E8F-B1E004C246EE}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50485"
+		Debug.AspNetCompiler.PhysicalPath = "Talented.UIClient\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50485\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50485"
+		Release.AspNetCompiler.PhysicalPath = "Talented.UIClient\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50485\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50485"
+		SlnRelativePath = "Talented.UIClient\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +57,14 @@ Global
 		{8A85D2F5-6C0E-46AF-A187-F6C5371CC0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A85D2F5-6C0E-46AF-A187-F6C5371CC0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A85D2F5-6C0E-46AF-A187-F6C5371CC0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11E1B227-083F-4711-B095-0D98EFE09D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11E1B227-083F-4711-B095-0D98EFE09D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11E1B227-083F-4711-B095-0D98EFE09D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11E1B227-083F-4711-B095-0D98EFE09D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{698D37EE-9047-4EA5-8E8F-B1E004C246EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{698D37EE-9047-4EA5-8E8F-B1E004C246EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{698D37EE-9047-4EA5-8E8F-B1E004C246EE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{698D37EE-9047-4EA5-8E8F-B1E004C246EE}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

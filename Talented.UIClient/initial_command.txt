@@ -1,0 +1,2 @@
+Add global path part prior to \Talented
+\Talented\Talented.UIClient>sencha -sdk \Sencha\SenchaExtJS generate app --modern Talented.UIClient "\Talented\Talented.UIClient"
