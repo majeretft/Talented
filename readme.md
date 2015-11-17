@@ -1,7 +1,5 @@
 ### Initial
 
-### Development branch
-
 
 #### Planning:
 
