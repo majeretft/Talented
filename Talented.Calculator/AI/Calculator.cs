@@ -12,6 +12,7 @@ namespace Talented.Calculator.AI
 {
 	/// <summary>
 	/// Calculates overall data
+	/// TODO: Rename to avoid naming conflict with namespace
 	/// </summary>
 	public class Calculator
 	{
